@@ -12,14 +12,16 @@
     <img src="images/marvel01.jpg" id="img">
 
     <div class="info">
-
+        <p>Información Personal</p>
         <div class="personal">
-
-            <label for="nombre">Nombre real </label>
-            <input type="text" id="nombre" name="nombre">
-
-            <label for="edad">Edad </label>
-            <input type="text" id="edad" name="edad">
+            <div class="name">
+                <label for="nombre">Nombre real </label>
+                <input type="text" id="nombre" name="nombre">
+            </div>
+            <div class="age">
+                <label for="edad">Edad </label>
+                <input type="text" id="edad" name="edad">
+            </div>
 
         </div>
 
@@ -28,40 +30,37 @@
 
             <label for="codename">Alias de Super Heroe</label>
             <input type="text" id="codename" name="codename">
-
+        </div>
+        
+        <div class="pos">
             <p>Posición</p>
-
+        
             <label for="Longitud">Longitud</label>
             <input type="number" id="Longitud" name="Longitud">
 
             <label for="Latitud">Latitud</label>
             <input type="number" id="Latitud" name="Latitud">
-      
         </div>
 
         <div class="imagen">
+            <p>Imagen</p>
+
             <form>
-                <select id="imagenSeleccionada">
-                  <option value="imagen1.jpg">Imagen 1</option>
-                  <option value="imagen2.jpg">Imagen 2</option>
-                  <option value="imagen3.jpg">Imagen 3</option>
-                  <!-- Agrega más opciones según sea necesario -->
+                <select id="imagenSeleccionada" class="boton">
+                    <option value="/images/blackWidow.webp">Black Widow</option>
+                    <option value="/images/capitanAmerica.webp">Capitan America</option>
+                    <option value="/images/drStrange.jpg">Dr Strange</option>
+                    <option value="/images/Hawkeye.webp">Hawkeye</option>
+                    <option value="/images/hulk.jpg">Hulk</option>
+                    <option value="/images/ironman.webp">Ironman</option>
+                    <option value="/images/scarletWitch.webp">scarlet Witch</option>
+                    <option value="/images/spiderman.jpg">Spiderman</option>
+                    <option value="/images/thor.webp">Thor</option>
                 </select>
                 <input type="button" value="Seleccionar" onclick="mostrarImagen()">
-              </form>
-              
-              <div id="imagenMostrada"></div>
-              
-              <script>
-              function mostrarImagen() {
-                var select = document.getElementById('imagenSeleccionada');
-                var selectedImage = select.options[select.selectedIndex].value;
-                var container = document.getElementById('imagenMostrada');
-                container.innerHTML = '<img src="' + selectedImage + '" alt="Imagen seleccionada">';
-              }
-              </script>
-              
-        </div>
+            </form>
+            <div id="imagenMostrada"></div> 
+        </div> 
     </div>
 
 
